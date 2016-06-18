@@ -1,0 +1,25 @@
+{
+  "name": "generator-polymer-element",
+  "version": "0.1.0",
+  "description": "A trimmed down polymer element Yeoman generator",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "seaneking/generator-polymer-element",
+  "author": {
+    "name": "Sean King",
+    "email": "sean@simpla.io",
+    "url": "https://github.com/seaneking"
+  },
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "polymer"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.19.0",
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.2"
+  }
+}

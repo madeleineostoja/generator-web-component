@@ -1,0 +1,29 @@
+{
+  "name": "<%= props.name %>",
+  "version": "0.0.0",
+  "authors": [
+    "<%= props.author %>"
+  ],
+  "description": "<%= props.description %>",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "<%= props.name %>"
+  ],
+  "main": "<%= props.name %>.html",
+  "license": "MIT",
+  "homepage": "https://github.com/<%= props.github =>/<%= props.name %>/",
+  "ignore": [
+    "*",
+    "!*.html",
+    "!LICENSE"
+  ],
+  "dependencies": {
+    "polymer": "^1.4.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "^4.0.0"
+  }
+}

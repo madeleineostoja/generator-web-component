@@ -1,0 +1,9 @@
+language: node_js
+before_script:
+  - npm install -g bower polylint web-component-tester
+  - bower install
+  - polylint
+node_js: stable
+script:
+  - xvfb-run wct
+  - "if [ \"${TRAVIS_PULL_REQUEST}\" = \"false\" ]; then wct -s 'default'; fi"
