@@ -27,14 +27,16 @@ module.exports = yeoman.Base.extend({
       {
         type: 'input',
         name: 'author',
+        required: true,
         message: 'Who wrote it?',
-        default: 'Sean King <sean@seanking.org>'
+        store: true
       },
       {
         type: 'input',
         name: 'github',
+        required: true,
         message: 'What GitHub org will it live in?',
-        default: 'seaneking'
+        store: true
       }
     ]).then(function (answers) {
       this.props = answers;
