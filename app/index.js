@@ -2,7 +2,8 @@
 
 var yeoman = require('yeoman-generator'),
     path = require('path'),
-    mkdirp = require('mkdirp');
+    mkdirp = require('mkdirp'),
+    glob = require('glob');
 
 module.exports = yeoman.Base.extend({
 
@@ -71,7 +72,7 @@ module.exports = yeoman.Base.extend({
 
     // Write everything else
     this.fs.copyTpl(
-      this.templatePath('!(element.html|gulpfile.babel.js)'),
+      glob.sync(this.templatePath('!(element.html|gulpfile.babel.js)'),{dot: true}),
       this.destinationPath(),
       this
     );
