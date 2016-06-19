@@ -20,6 +20,7 @@
     "!LICENSE"
   ],
   "dependencies": {
+    "webcomponentsjs": "^0.7.14",
     "polymer": "^1.4.0"
   },
   "devDependencies": {

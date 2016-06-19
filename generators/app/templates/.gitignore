@@ -1,4 +1,7 @@
-bower_components
+# Deps
 node_modules
+bower_components
+
+# Runtime
 .DS_Store
 *.log

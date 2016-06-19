@@ -49,8 +49,8 @@ module.exports = yeoman.generators.Base.extend({
   writing: {
     build: function () {
       this.fs.copyTpl(
-        this.templatePath('element.html'),
-        this.destinationPath(this.props.name + '.html'),
+        this.templatePath('src/element.html'),
+        this.destinationPath('src/' + this.props.name + '.html'),
         this
       );
 
@@ -58,7 +58,7 @@ module.exports = yeoman.generators.Base.extend({
     },
     // HACK
     clean: function() {
-      this.fs.delete('./element.html');
+      this.fs.delete('./src/element.html');
     }
   }
 });

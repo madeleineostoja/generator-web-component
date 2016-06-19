@@ -1,0 +1,49 @@
+{
+  "name": "<%= props.name %>",
+  "version": "0.0.0",
+  "description": "<%= props.description %>",
+  "main": "<%= props.name %>.html",
+  "scripts": {
+    "test": "gulp test:local"
+  },
+  "author": "<%= props.author %>",
+  "license": "MIT",
+  "keywords": [
+    "web components",
+    "<%= props.name %>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<%= props.github =>/<%= props.name %>.git"
+  },
+  "bugs": {
+    "url": "https://github.com/<%= props.github =>/<%= props.name %>/issues"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.0.0",
+    "babel-core": "^6.2.1",
+    "babel-eslint": "^4.1.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-es2015-rollup": "^1.0.0",
+    "browser-sync": "^2.9.0",
+    "eslint": "^1.6.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-htmlmin": "^1.2.0",
+    "gulp-if": "^2.0.0",
+    "gulp-inline-source": "^2.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-postcss": "^6.1.0",
+    "gulp-process-inline": "^0.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rollup-file": "^0.1.0",
+    "gulp-size": "^2.0.0",
+    "rollup-plugin-babel": "^2.2.0",
+    "rollup-plugin-commonjs": "^1.4.0",
+    "rollup-plugin-node-resolve": "^1.5.0",
+    "run-sequence": "^1.1.5",
+    "web-component-tester": "^3.3.0",
+    "yargs": "^3.27.0"
+  }
+}
