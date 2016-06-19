@@ -1,9 +1,9 @@
 # Polymer Element Generator 
 [![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
-Quickly scaffold lightweight [Polymer][polymer] elements with [Yeoman][yeoman], based on Polymer's [seed-element][seed-element]. 
+Quickly scaffold and develop modern [Polymer][polymer] elements with [Yeoman][yeoman], based on Polymer's [seed-element][seed-element] built as an ES6 class.
 
-The generator comes bundled with an optional Gulp buildstep for modern component development, which includes [Babel][babel], [Rollup][rollup], [PostCSS][postcss], inline asset processing, and [BrowserSync][browsersync].
+The generator comes bundled with an optional Gulp buildstep which includes [Babel][babel], [Rollup][rollup], [PostCSS][postcss], inline asset processing, and [BrowserSync][browsersync].
 
 --
 

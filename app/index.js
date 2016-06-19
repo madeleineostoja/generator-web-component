@@ -45,6 +45,7 @@ module.exports = yeoman.Base.extend({
   },
 
   default: function () {
+    // Check directory
     if (path.basename(this.destinationPath()) !== this.props.name) {
       this.log(
         'Your component should be inside a folder named ' + this.props.name + '\n' +
@@ -53,6 +54,11 @@ module.exports = yeoman.Base.extend({
       mkdirp(this.props.name);
       this.destinationRoot(this.destinationPath(this.props.name));
     }
+
+    // Build component class
+    props.class = props.name.split('-').reduce(function(previous, part) {
+      return previous + part.charAt(0).toUpperCase() + part.slice(1);
+    }, '');
   },
 
   writing: function() {

@@ -11,12 +11,15 @@
   </template>
 
   <script>
-    Polymer({
-      is: '<%= props.name %>',
+    class <%= props.class %> {
+      beforeRegister() {
+        this.is = '<%= props.name %>',
 
-      properties: {
+        this.properties = {
 
+        }
       }
-    });
+    };
+    Polymer(<%= props.class %>)
   </script>
 </dom-module>
