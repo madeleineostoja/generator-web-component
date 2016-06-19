@@ -1,7 +1,7 @@
 {
   "name": "generator-polymer-element",
   "version": "0.4.0",
-  "description": "A trimmed down polymer element Yeoman generator",
+  "description": "A polymer element generator for modern component development",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "seaneking/generator-polymer-element",
@@ -11,15 +11,13 @@
     "url": "https://github.com/seaneking"
   },
   "files": [
-    "generators"
+    "app"
   ],
   "keywords": [
     "yeoman-generator",
     "polymer"
   ],
   "dependencies": {
-    "yeoman-generator": "^0.23.0",
-    "chalk": "^1.0.0",
-    "yosay": "^1.0.2"
+    "yeoman-generator": "^0.23.0"
   }
 }
