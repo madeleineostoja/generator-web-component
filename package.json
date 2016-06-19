@@ -1,6 +1,6 @@
 {
   "name": "generator-polymer-element",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Quickly scaffold Polymer elements with Yeoman",
   "license": "MIT",
   "main": "app/index.js",
