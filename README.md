@@ -1,7 +1,9 @@
 # Polymer Element Generator 
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+[![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
-A trimmed down [Yeoman][yeoman] generator for scaffolding [Polymer][polymer] elements.
+A mildly opinionated [Yeoman][yeoman] generator for scaffolding [Polymer][polymer] elements, based on Polymer's [seed-element][seed-element].
+
+Includes an optional buildstep for modern component development, which includes [Babel][babel], [Rollup][rollup], [PostCSS][postcss], inline asset processing, and [BrowserSync][browsersync].
 
 --
 
@@ -9,33 +11,44 @@ A trimmed down [Yeoman][yeoman] generator for scaffolding [Polymer][polymer] ele
 
 First install Yeoman 
 
-```shell
+```sh
 $ npm install -g yo
 ```
 
 Then install the generator 
 
-```shell
+```sh
 $ npm install -g generator-polymer-element
 ```
 
 Then use it
 
-```shell
+```sh
 $ yo polymer-element
 ```
+
+
+### TODO
+
+- Fix failing templating on bower.json and README templates
+- Make buildstep optional :-P
+- Add basic tests
 
 --
 
 ### License
 
-MIT © [Sean King](http://simpla.io)
+MIT © [Sean King](https://github.com/seaneking)
 
 [npm-image]: https://badge.fury.io/js/generator-polymer-element.svg
 [npm-url]: https://npmjs.org/package/generator-polymer-element
-[travis-image]: https://travis-ci.org/seaneking/generator-polymer-element.svg?branch=master
-[travis-url]: https://travis-ci.org/seaneking/generator-polymer-element
 [daviddm-image]: https://david-dm.org/seaneking/generator-polymer-element.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/seaneking/generator-polymer-element
-[PostCSS]: https://github.com/postcss/postcss
+
 [yeoman]: http://yeoman.io
+[polymer]: http://polymer-project.org
+[seed-element]: https://github.com/PolymerElements/seed-element
+[postcss]: https://github.com/postcss/postcss
+[babel]: http://babeljs.io
+[rollup]: http://rollupjs.org
+[browsersync]: http://browsersync.io/
