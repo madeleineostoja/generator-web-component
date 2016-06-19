@@ -56,7 +56,7 @@ module.exports = yeoman.Base.extend({
     }
 
     // Build component class
-    props.class = props.name.split('-').reduce(function(previous, part) {
+    this.props.class = this.props.name.split('-').reduce(function(previous, part) {
       return previous + part.charAt(0).toUpperCase() + part.slice(1);
     }, '');
   },
@@ -84,7 +84,6 @@ module.exports = yeoman.Base.extend({
   },
 
   install: function() {
-    this.log('Installing component dependencies...');
     this.installDependencies();
   }
 });

@@ -71,37 +71,38 @@ const bs = browserSync.create(),
         }
       };
 
-wct.gulp.init(gulp);
-
 gulp.task('build', () => {
+  let styles = processInline(),
+      scripts = processInline();
+
   return gulp.src(['src/*.html'])
           .pipe(errorNotifier())
 
-            // Inline styles and scripts
-            .pipe(inline(OPTIONS.inline))
+          // Inline assets
+          .pipe(inline(OPTIONS.inline))
 
-            // Js
-            .pipe(processInline().extract('script'))
-              .pipe(eslint())
-              .pipe(eslint.format())
-              .pipe(gulpif(!argv.debug, eslint.failAfterError()))
-              .pipe(rollup(OPTIONS.rollup))
-            .pipe(processInline().restore())
+          // JS
+          .pipe(scripts.extract('script'))
+            .pipe(eslint())
+            .pipe(eslint.format())
+            .pipe(gulpif(!argv.debug, eslint.failAfterError()))
+            .pipe(rollup(OPTIONS.rollup))
+          .pipe(scripts.restore())
 
-            // CSS
-            .pipe(processInline().extract('style'))
-              .pipe(postcss(OPTIONS.postcss))
-            .pipe(processInline().restore())
+          // CSS
+          .pipe(styles.extract('style'))
+            .pipe(postcss(OPTIONS.postcss))
+          .pipe(styles.restore())
 
-            // Minify and pipe out
-            .pipe(gulpif(!argv.debug, minify(OPTIONS.HTMLmin)))
-            .pipe(rename({dirname: ''}))
-            .pipe(size({ gzip: true }))
-          .pipe(gulp.dest('.'));
+          .pipe(gulpif(!argv.debug, minify(OPTIONS.HTMLmin)))
+
+          .pipe(size({ title: src, gzip: true }))
+        .pipe(gulp.dest('dist'))
 });
 
-gulp.task('serve', (callback) => bs.init(OPTIONS.browserSync));
+wct.gulp.init(gulp);
 
+gulp.task('serve', (callback) => bs.init(OPTIONS.browserSync));
 gulp.task('refresh', () => bs.reload());
 
 gulp.task('test', ['build', 'test:local']);
