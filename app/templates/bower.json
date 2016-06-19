@@ -13,7 +13,7 @@
   ],
   "main": "<%= props.name %>.html",
   "license": "MIT",
-  "homepage": "https://github.com/<%= props.github =>/<%= props.name %>/",
+  "homepage": "https://github.com/<%= props.github %>/<%= props.name %>/",
   "ignore": [
     "*",
     "!*.html",

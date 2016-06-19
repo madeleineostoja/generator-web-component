@@ -14,10 +14,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/<%= props.github =>/<%= props.name %>.git"
+    "url": "https://github.com/<%= props.github %>/<%= props.name %>.git"
   },
   "bugs": {
-    "url": "https://github.com/<%= props.github =>/<%= props.name %>/issues"
+    "url": "https://github.com/<%= props.github %>/<%= props.name %>/issues"
   },
   "devDependencies": {
     "autoprefixer": "^6.0.0",

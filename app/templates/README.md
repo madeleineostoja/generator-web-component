@@ -24,7 +24,7 @@ Then use <%= props.name %> in your project
 
 ### License
 
-MIT © <%= props.author =>
+MIT © <%= props.author %>
 
 [bower-badge]: https://img.shields.io/bower/v/<%= props.name %>.svg
 [bowerlicense-badge]: https://img.shields.io/bower/l/<%= props.name %>.svg
