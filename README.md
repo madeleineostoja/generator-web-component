@@ -1,24 +1,18 @@
 # Polymer Element Generator 
 [![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
-A mildly opinionated [Yeoman][yeoman] generator for scaffolding [Polymer][polymer] elements, based on Polymer's [seed-element][seed-element].
+Quickly scaffold lightweight [Polymer][polymer] elements with [Yeoman][yeoman], based on Polymer's [seed-element][seed-element]. 
 
-Includes an optional buildstep for modern component development, which includes [Babel][babel], [Rollup][rollup], [PostCSS][postcss], inline asset processing, and [BrowserSync][browsersync].
+The generator comes bundled with an optional Gulp buildstep for modern component development, which includes [Babel][babel], [Rollup][rollup], [PostCSS][postcss], inline asset processing, and [BrowserSync][browsersync].
 
 --
 
 ### Installation & Usage
 
-First install Yeoman 
+Install Yeoman and the element generator
 
 ```sh
-$ npm install -g yo
-```
-
-Then install the generator 
-
-```sh
-$ npm install -g generator-polymer-element
+$ npm install -g generator-polymer-element yo
 ```
 
 Then use it
@@ -30,7 +24,6 @@ $ yo polymer-element
 
 ### TODO
 
-- Fix failing templating on bower.json and README templates
 - Make buildstep optional :-P
 - Add basic tests
 

@@ -1,7 +1,7 @@
 {
   "name": "generator-polymer-element",
   "version": "0.4.1",
-  "description": "A polymer element generator for modern component development",
+  "description": "Quickly scaffold Polymer elements with Yeoman",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "seaneking/generator-polymer-element",
