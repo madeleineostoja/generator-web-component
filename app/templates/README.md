@@ -3,16 +3,19 @@
 
 <%= props.description %>
 
-### Basic Usage
-Install the web components polyfill and <%= props.name %> with bower
+### Installation & usage
+
+Install <%= props.name %> with Bower
+
 ```sh
 $ bower install webcomponentsjs <%= props.name %> --save
 ```
 
-Include the webcomponents polyfill and import <%= props.name %> into your project
+Include the Web Components polyfill and import <%= props.name %> into your project
+
 ```html
 <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-<link rel="import" href="/bower_components/<%= props.name %>/<%= props.name %>.html"
+<link rel="import" href="/bower_components/<%= props.name %>/<%= props.name %>.html">
 ```
 
 Then use <%= props.name %> in your project
