@@ -96,8 +96,8 @@ gulp.task('build', () => {
 
           .pipe(gulpif(!argv.debug, minify(OPTIONS.HTMLmin)))
 
-          .pipe(size({ title: src, gzip: true }))
-        .pipe(gulp.dest('dist'))
+          .pipe(size({ gzip: true }))
+        .pipe(gulp.dest('.'))
 });
 
 wct.gulp.init(gulp);
