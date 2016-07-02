@@ -21,7 +21,7 @@
   ],
   "dependencies": {
     "webcomponentsjs": "^0.7.14",
-    "polymer": "^1.4.0"
+    "polymer": "^1.6.0"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
