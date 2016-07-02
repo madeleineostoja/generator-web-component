@@ -72,7 +72,7 @@ module.exports = yeoman.Base.extend({
 
     // Write everything else
     this.fs.copyTpl(
-      glob.sync(this.templatePath('!(src/element.html|gulpfile.babel.js)'), { dot: true }),
+      glob.sync(this.templatePath('!(element.html|gulpfile.babel.js)'), { dot: true }),
       this.destinationPath(),
       this
     );
