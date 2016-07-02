@@ -3,11 +3,27 @@
 <dom-module id="<%= props.name %>">
   <template>
     <style>
+      :host, *, *::before, *::after {
+        box-sizing: border-box;
+        -moz-osx-font-smoothing: grayscale;
+         -webkit-font-smoothing: antialiased;
+                 font-smoothing: antialiased;
+      }
+
       :host {
         display: block;
-        box-sizing: border-box;
+      }
+
+      :host[hidden], *[hidden] {
+        display: none !important;
+      }
+
+      /* Shim inconsistent browser hidden property */
+      :host[hidden], *[hidden] {
+        display: none !important;
       }
     </style>
+
   </template>
 
   <script>
