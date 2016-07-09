@@ -27,8 +27,6 @@ Note for cross-browser support you should also include the [Web Components Polyf
 
 --
 
-### License
-
 MIT © <%= props.author %>
 
 [webcomponents]: https://github.com/webcomponents/webcomponentsjs
