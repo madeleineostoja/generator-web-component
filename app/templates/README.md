@@ -8,26 +8,30 @@
 Install <%= props.name %> with Bower
 
 ```sh
-$ bower install webcomponentsjs <%= props.name %> --save
+$ bower install <%= props.name %> --save
 ```
 
-Include the Web Components polyfill and import <%= props.name %> into your project
+Import it into the `<head>` of your page
 
 ```html
-<script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 <link rel="import" href="/bower_components/<%= props.name %>/<%= props.name %>.html">
 ```
 
 Then use <%= props.name %> in your project
+
 ```html
 <<%= props.name %>></<%= props.name %>>
 ```
+
+Note for cross-browser support you should also include the [Web Components Polyfill][webcomponents].
 
 --
 
 ### License
 
 MIT © <%= props.author %>
+
+[webcomponents]: https://github.com/webcomponents/webcomponentsjs
 
 [bower-badge]: https://img.shields.io/bower/v/<%= props.name %>.svg
 [bowerlicense-badge]: https://img.shields.io/bower/l/<%= props.name %>.svg
