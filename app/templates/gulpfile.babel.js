@@ -62,6 +62,7 @@ const bs = browserSync.create(),
         browserSync: {
           server: {
             baseDir: './',
+            index: 'demo/index.html',
             routes: {
               '/': './bower_components'
             }
