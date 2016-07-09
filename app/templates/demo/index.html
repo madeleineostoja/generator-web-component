@@ -4,8 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
     <title><%= props.name %> Demo</title>
+
+    <!-- Import Web Components polyfill -->
     <script src="../../webcomponentsjs/webcomponents-lite.min.js"></script>
+
+    <!-- Use shadow DOM if available -->
+    <script>
+      window.Polymer = { dom: 'shadow' };
+    </script>
+
+    <!-- Import component -->
     <link rel="import" href="../<%= props.name %>.html">
+
   </head>
   <body unresolved>
 
