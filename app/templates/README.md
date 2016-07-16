@@ -1,5 +1,5 @@
 # <%= props.name %>
-[![Build status][travis-badge]][travis-url] [![Bower dependencies][bowerdeps-badge]] [bowerdeps-url]![Version][bower-badge]
+[![Build status][travis-badge]][travis-url] [![Bower dependencies][bowerdeps-badge]][bowerdeps-url] ![Version][bower-badge]
 
 <%= props.description %>
 
