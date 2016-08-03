@@ -1,5 +1,16 @@
 <link rel="import" href="../polymer/polymer.html">
+<!--
+An element providing a solution to no problem in particular.
 
+Example:
+```html
+<<%= props.name %>>
+  <h2>Hello World</h2>
+</<%= props.name %>>
+```    
+
+@demo demo/index.html
+-->
 <dom-module id="<%= props.name %>">
   <template>
     <style>
@@ -15,6 +26,7 @@
       }
     </style>
 
+    <content></content>
   </template>
 
   <script>
