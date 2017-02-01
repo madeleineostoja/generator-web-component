@@ -24,6 +24,7 @@ const rollup = require('gulp-rollup-file');
 const resolve = require('rollup-plugin-node-resolve');
 const commonJs = require('rollup-plugin-commonjs');
 const babel = require('rollup-plugin-babel');
+const json = require('rollup-plugin-json');
 
 // CSS
 const postcss = require('gulp-postcss');
@@ -35,9 +36,12 @@ const bs = browserSync.create(),
       OPTIONS = {
         rollup: {
           plugins: [
-            resolve({ main: true }),
+            resolve({ main: true, browser: true }),
             commonJs(),
-            babel()
+            json(),
+            babel({
+              exclude: 'node_modules/**/*'
+            })
           ],
           format: 'iife'
         },
