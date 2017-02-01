@@ -7,7 +7,6 @@ const notify = require('gulp-notify');
 const gulpif = require('gulp-if');
 const size = require('gulp-size');
 const plumber = require('gulp-plumber');
-const rename = require('gulp-rename');
 const gulprun = require('run-sequence');
 const yargs = require('yargs');
 const browserSync = require('browser-sync');

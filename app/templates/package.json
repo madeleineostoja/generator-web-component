@@ -36,7 +36,6 @@
     "gulp-plumber": "^1.0.0",
     "gulp-postcss": "^6.1.0",
     "gulp-process-inline": "^0.1.1",
-    "gulp-rename": "^1.2.2",
     "gulp-rollup-file": "^0.1.0",
     "gulp-size": "^2.0.0",
     "rollup-plugin-babel": "^2.6.0",
