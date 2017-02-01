@@ -8,7 +8,7 @@ const glob = require('glob');
 module.exports = class extends Yeoman {
 
   prompting() {
-    var done = this.async();
+    let done = this.async();
 
     return this.prompt([
       {
@@ -16,9 +16,7 @@ module.exports = class extends Yeoman {
         name: 'name',
         required: true,
         message: 'Give it a tag name (min two words separated by dashes)',
-        validate: function(str) {
-          return /^([a-z])(?!.*[<>])(?=.*-).+$/.test(str);
-        }
+        validate: str => /^([a-z])(?!.*[<>])(?=.*-).+$/.test(str)
       },
       {
         type: 'input',
@@ -37,10 +35,10 @@ module.exports = class extends Yeoman {
         required: true,
         message: 'What GitHub org will it live in?'
       }
-    ]).then(function (answers) {
+    ]).then(answers => {
       this.props = answers;
       done();
-    }.bind(this));
+    });
   }
 
   default() {
@@ -55,9 +53,10 @@ module.exports = class extends Yeoman {
     }
 
     // Build component class
-    this.props.class = this.props.name.split('-').reduce(function(previous, part) {
-      return previous + part.charAt(0).toUpperCase() + part.slice(1);
-    }, '');
+    this.props.class = this.props.name.split('-')
+      .reduce((previous, part) => {
+        return previous + part.charAt(0).toUpperCase() + part.slice(1);
+      }, '');
   }
 
   writing() {
