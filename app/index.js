@@ -65,14 +65,21 @@ module.exports = yeoman.Base.extend({
   writing: function() {
     // Write & rename element src
     this.fs.copyTpl(
-      this.templatePath('src/element.html'),
+      this.templatePath('element.html'),
       this.destinationPath('src/' + this.props.name + '.html'),
       this
     );
 
+     // Write & rename element test
++    this.fs.copyTpl(
++      this.templatePath('element-test.html'),
++      this.destinationPath('test/' + this.props.name + '-test.html'),
++      this
++    );
+
     // Write everything else
     this.fs.copyTpl(
-      glob.sync(this.templatePath('!(element.html|gulpfile.babel.js)'), { dot: true }),
+      glob.sync(this.templatePath('!(element.html|element-test.html|gulpfile.babel.js)'), { dot: true }),
       this.destinationPath(),
       this
     );

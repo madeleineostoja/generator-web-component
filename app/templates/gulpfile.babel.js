@@ -1,7 +1,7 @@
 /*eslint one-var: 0 */
 
 // Core deps
-// Use require() because of rollup babel preset
+// Use require() because of rollup
 const gulp = require('gulp');
 const notify = require('gulp-notify');
 const gulpif = require('gulp-if');

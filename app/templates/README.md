@@ -8,7 +8,7 @@
 Install <%= props.name %> with Bower
 
 ```sh
-$ bower install <%= props.name %> --save
+$ bower install <%= props.github %>/<%= props.name %> --save
 ```
 
 Import it into the `<head>` of your page

@@ -5,20 +5,9 @@
     <title><%= props.name %></title>
     <script src="../../webcomponentsjs/webcomponents.min.js"></script>
     <script src="../../web-component-tester/browser.js"></script>
-    <script src="../../test-fixture/test-fixture-mocha.js"></script>
-    <link rel="import" href="../../test-fixture/test-fixture.html">
 
     <!-- Import the element to test -->
     <link rel="import" href="../<%= props.name %>.html">
-
-    <!-- Setup fixtures -->
-    <script>
-      (function() {
-        window.fixtures = window.fixtures || {};
-        window.fixtures['<%= props.name %>'] = {
-        };
-      })();
-    </script>
 
   </head>
   <body>
@@ -29,11 +18,7 @@
     </test-fixture>
     <script>
       describe('<<%= props.name %>>', function() {
-
-        var component,
-            componentFixtures;
-
-        componentFixtures = window.fixtures;
+        var component;
 
         beforeEach(function() {
           component = fixture('default');
