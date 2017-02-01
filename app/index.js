@@ -1,9 +1,9 @@
 'use strict';
 
-var Yeoman = require('yeoman-generator'),
-    path = require('path'),
-    mkdirp = require('mkdirp'),
-    glob = require('glob');
+const Yeoman = require('yeoman-generator');
+const path = require('path');
+const mkdirp = require('mkdirp');
+const glob = require('glob');
 
 module.exports = class extends Yeoman {
 
