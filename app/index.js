@@ -29,15 +29,13 @@ module.exports = class extends Yeoman {
         type: 'input',
         name: 'author',
         required: true,
-        message: 'Who wrote it?',
-        store: true
+        message: 'Who wrote it?'
       },
       {
         type: 'input',
         name: 'github',
         required: true,
-        message: 'What GitHub org will it live in?',
-        store: true
+        message: 'What GitHub org will it live in?'
       }
     ]).then(function (answers) {
       this.props = answers;
