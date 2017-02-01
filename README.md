@@ -57,7 +57,6 @@ You can serve your element locally with BrowserSync. Just run `gulp serve`, or t
 ### TODO
 
 - Add basic tests
-- Make buildstep (+ES6) optional
 
 --
 
