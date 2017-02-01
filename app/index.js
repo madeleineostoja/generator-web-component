@@ -1,13 +1,13 @@
 'use strict';
 
-var yeoman = require('yeoman-generator'),
+var Yeoman = require('yeoman-generator'),
     path = require('path'),
     mkdirp = require('mkdirp'),
     glob = require('glob');
 
-module.exports = yeoman.Base.extend({
+module.exports = class extends Yeoman {
 
-  prompting: function() {
+  prompting() {
     var done = this.async();
 
     return this.prompt([
@@ -43,9 +43,9 @@ module.exports = yeoman.Base.extend({
       this.props = answers;
       done();
     }.bind(this));
-  },
+  }
 
-  default: function () {
+  default() {
     // Check directory
     if (path.basename(this.destinationPath()) !== this.props.name) {
       this.log(
@@ -60,9 +60,9 @@ module.exports = yeoman.Base.extend({
     this.props.class = this.props.name.split('-').reduce(function(previous, part) {
       return previous + part.charAt(0).toUpperCase() + part.slice(1);
     }, '');
-  },
+  }
 
-  writing: function() {
+  writing() {
     // Write & rename element src
     this.fs.copyTpl(
       this.templatePath('element.html'),
@@ -70,12 +70,12 @@ module.exports = yeoman.Base.extend({
       this
     );
 
-     // Write & rename element test
-+    this.fs.copyTpl(
-+      this.templatePath('element-test.html'),
-+      this.destinationPath('test/' + this.props.name + '-test.html'),
-+      this
-+    );
+    // Write & rename element test
++   this.fs.copyTpl(
+      this.templatePath('element-test.html'),
+      this.destinationPath('src/' + this.props.name + '-test.html'),
+      this
+    );
 
     // Write everything else
     this.fs.copyTpl(
@@ -89,9 +89,9 @@ module.exports = yeoman.Base.extend({
       this.templatePath('gulpfile.babel.js'),
       this.destinationPath('gulpfile.babel.js')
     );
-  },
+  }
 
-  install: function() {
+  install() {
     this.installDependencies();
   }
-});
+};
