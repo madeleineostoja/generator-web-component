@@ -1,5 +1,5 @@
 # <%= props.name %>
-[![Build status][travis-badge]][travis-url] [![Bower dependencies][bowerdeps-badge]][bowerdeps-url] ![Version][bower-badge]
+[![Build status][travis-badge]][travis-url] [![Bower dependencies][bowerdeps-badge]][bowerdeps-url] ![Version][bower-badge] [![Published][webcomponents-badge]][webcomponents-url]
 
 <%= props.description %>
 
@@ -23,7 +23,16 @@ Then use <%= props.name %> in your project
 <<%= props.name %>></<%= props.name %>>
 ```
 
-Note for cross-browser support you should also include the [Web Components Polyfill][webcomponents].
+#### Polyfills for cross-browser support
+<%= props.name %>> relies on emerging standards, for full cross-browser support include the [Web Components Lite][webcomponents] polyfill.
+
+```sh
+bower i webcomponentsjs --save
+```
+
+```html
+<script src="/bower_components/webcomponentsjs/web-components-lite.js"></script>
+```
 
 --
 
@@ -37,3 +46,5 @@ MIT © <%= props.author %>
 [travis-url]: https://travis-ci.org/<%= props.github %>/<%= props.name %>
 [bowerdeps-badge]: https://img.shields.io/gemnasium/<%= props.github %>/<%= props.name %>.svg
 [bowerdeps-url]: https://gemnasium.com/bower/<%= props.name %>
+[webcomponents-badge]: https://img.shields.io/badge/webcomponents.org-published-blue.svg
+[webcomponents-url]: https://www.webcomponents.org/element/<%= props.github %>/<%= props.name %>.svg
