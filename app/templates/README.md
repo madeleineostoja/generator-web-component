@@ -1,5 +1,5 @@
 # <%= props.name %>
-[![Build status][travis-badge]][travis-url] [![Bower dependencies][bowerdeps-badge]][bowerdeps-url] ![Version][bower-badge] [![Published][webcomponents-badge]][webcomponents-url]
+[![Build status][travis-badge]][travis-url] [![Bower dependencies][bowerdeps-badge]][bowerdeps-url] ![Version][bower-badge] ![Size][size-badge] [![Published][webcomponents-badge]][webcomponents-url]
 
 <%= props.description %>
 
@@ -46,5 +46,6 @@ MIT © <%= props.author %>
 [travis-url]: https://travis-ci.org/<%= props.github %>/<%= props.name %>
 [bowerdeps-badge]: https://img.shields.io/gemnasium/<%= props.github %>/<%= props.name %>.svg
 [bowerdeps-url]: https://gemnasium.com/bower/<%= props.name %>
+[size-badge]: https://badges.herokuapp.com/size/github/<%= props.github %>/<%= props.name %>/master/<%= props.name %>.html?gzip=true&color=blue
 [webcomponents-badge]: https://img.shields.io/badge/webcomponents.org-published-blue.svg
 [webcomponents-url]: https://www.webcomponents.org/element/<%= props.github %>/<%= props.name %>.svg
