@@ -13,6 +13,9 @@
   "main": "<%= props.name %>.html",
   "license": "MIT",
   "homepage": "https://github.com/<%= props.github %>/<%= props.name %>/",
+  "demos": {
+    "Demo": "demo/index.html"
+  },
   "ignore": [
     "*",
     "!*.html",
