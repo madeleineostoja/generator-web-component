@@ -5,21 +5,57 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
     <title><%= props.name %> Demo</title>
 
-    <!-- Import Web Components polyfill -->
-    <script src="../../webcomponentsjs/webcomponents-lite.min.js"></script>
-
-    <!-- Use shadow DOM if available -->
+    <!-- Setup demo page -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.24/webcomponents-lite.min.js"></script>
     <script>
       window.Polymer = { dom: 'shadow' };
     </script>
+    <link rel="import" href="../iron-demo-helpers/demo-snippet.html">
 
     <!-- Import component -->
     <link rel="import" href="../<%= props.name %>.html">
 
+    <!-- Demo styles -->
+    <style>
+      /**
+       * Page styles
+       */
+      body {
+        font-family: sans-serif;
+        color: #303c46
+      }
+
+      .demo {
+        width: 90%;
+        max-width: 38rem;
+        margin: 4rem auto;
+      }
+
+      .demo__title {
+        font-size: 1.4rem;
+        font-weight: 400;
+      }
+
+      /* Add any element styles here */
+    </style>
   </head>
-  <body unresolved>
 
-    <<%= props.name %>></<%= props.name %>>
+  <body>
 
+    <div class="demo">
+      <h1 class="demo__title">Demo of <% props.name %></h1>
+      <demo-snippet>
+        <template>
+
+          <!-- Add your demo code here -->
+
+        </template>
+      </demo-snippet>
+    </div>
+
+    <!--
+      You can add additional demos here
+      Just copy & paste the above block
+     -->
   </body>
 </html>

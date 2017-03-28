@@ -22,10 +22,10 @@
     "!LICENSE"
   ],
   "dependencies": {
-    "polymer": "^1.6.0"
+    "polymer": "^1.8.0"
   },
   "devDependencies": {
-    "webcomponentsjs": "^0.7.14",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.2.5",
     "web-component-tester": "^4.0.0"
   }
 }

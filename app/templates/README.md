@@ -24,14 +24,10 @@ Then use <%= props.name %> in your project
 ```
 
 #### Polyfills for cross-browser support
-<%= props.name %>> relies on emerging standards, for full cross-browser support include the [Web Components Lite][webcomponents] polyfill.
-
-```sh
-bower i webcomponentsjs --save
-```
+<%= props.name %>> relies on emerging standards, for full cross-browser support include the [Web Components Lite][webcomponents] polyfill. 
 
 ```html
-<script src="/bower_components/webcomponentsjs/web-components-lite.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.24/webcomponents-lite.min.js"></script>
 ```
 
 --

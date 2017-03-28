@@ -106,7 +106,7 @@ gulp.task('build', () => {
 
 wct.gulp.init(gulp);
 
-gulp.task('serve', (callback) => bs.init(OPTIONS.browserSync));
+gulp.task('serve', () => bs.init(OPTIONS.browserSync));
 gulp.task('refresh', () => bs.reload());
 
 gulp.task('test', ['build', 'test:local']);
