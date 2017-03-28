@@ -1,9 +1,9 @@
 # <%= props.name %>
-[![Build status][travis-badge]][travis-url] [![Bower dependencies][bowerdeps-badge]][bowerdeps-url] ![Version][bower-badge] ![Size][size-badge] [![Published][webcomponents-badge]][webcomponents-url]
+![Version][bower-badge] [![Build status][travis-badge]][travis-url] [![Bower dependencies][bowerdeps-badge]][bowerdeps-url] ![Size][size-badge] [![Published][webcomponents-badge]][webcomponents-url]
 
 <%= props.description %>
 
-### Installation & usage
+## Installation & usage
 
 Install <%= props.name %> with Bower
 
@@ -23,18 +23,16 @@ Then use <%= props.name %> in your project
 <<%= props.name %>></<%= props.name %>>
 ```
 
-#### Polyfills for cross-browser support
-<%= props.name %>> relies on emerging standards, for full cross-browser support include the [Web Components Lite][webcomponents] polyfill. 
+### Polyfills for cross-browser support
+<%= props.name %>> relies on emerging standards, for full cross-browser support include the [Web Components Lite](https://github.com/webcomponents/webcomponentsjs) polyfill. 
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.24/webcomponents-lite.min.js"></script>
 ```
 
---
+---
 
 MIT © <%= props.author %>
-
-[webcomponents]: https://github.com/webcomponents/webcomponentsjs
 
 [bower-badge]: https://img.shields.io/bower/v/<%= props.name %>.svg
 [bowerlicense-badge]: https://img.shields.io/bower/l/<%= props.name %>.svg
