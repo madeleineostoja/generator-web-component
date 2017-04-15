@@ -17,15 +17,12 @@
   </template>
 
   <script>
-    class <%= props.class %> {
-      beforeRegister() {
-        this.is = '<%= props.name %>';
+    Polymer({
+      is: '<%= props.name %>',
 
-        this.properties = {
+      properties: {
 
-        };
       }
-    };
-    Polymer(<%= props.class %>)
+    });
   </script>
 </dom-module>

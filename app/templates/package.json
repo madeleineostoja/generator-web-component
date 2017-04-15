@@ -39,11 +39,11 @@
     "gulp-rollup-file": "^0.1.0",
     "gulp-size": "^2.0.0",
     "rollup-plugin-babel": "^2.6.0",
-    "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-json": "^2.1.0",
-    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
     "run-sequence": "^1.1.5",
     "web-component-tester": "^5.0.0",
-    "yargs": "^6.6.0"
+    "yargs": "^7.1.0"
   }
 }
