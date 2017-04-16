@@ -1,5 +1,5 @@
 {
-  "name": "<%= props.name %>",
+  "name": "temp",
   "version": "0.0.0",
   "authors": [
     "<%= props.author %>"
@@ -27,6 +27,6 @@
   },
   "devDependencies": {
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.2.5",
-    "web-component-tester": "^4.0.0"
+    "web-component-tester": "^5.0.1"
   }
 }
