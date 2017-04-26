@@ -23,10 +23,16 @@
         color: #303c46
       }
 
-      .demo {
+      .wrapper {
         width: 90%;
         max-width: 38rem;
-        margin: 4rem auto;
+        margin: 2rem auto;
+      }
+
+      .demo {
+        display: inline-block;
+        width: 100%;
+        margin: 2rem 0;
       }
 
       .demo__title {
@@ -34,26 +40,29 @@
         font-weight: 400;
       }
 
-      /* Add any element styles here */
+      /* Add element styles here */
     </style>
   </head>
 
   <body>
+    <div class="wrapper">
 
-    <div class="demo">
-      <h1 class="demo__title">Basic demo</h1>
-      <demo-snippet>
-        <template>
+      <div class="demo">
+        <h1 class="demo__title">Basic demo</h1>
+        <demo-snippet>
+          <template>
 
-          <!-- Add your demo code here -->
+            <!-- Add your demo code here -->
 
-        </template>
-      </demo-snippet>
+          </template>
+        </demo-snippet>
+      </div>
+
+      <!--
+        You can add additional demos here
+        Just copy & paste the above block
+       -->
+
     </div>
-
-    <!--
-      You can add additional demos here
-      Just copy & paste the above block
-     -->
   </body>
 </html>
