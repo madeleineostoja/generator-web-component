@@ -42,4 +42,4 @@ MIT © <%= props.author %>
 [bowerdeps-url]: https://gemnasium.com/bower/<%= props.name %>
 [size-badge]: https://badges.herokuapp.com/size/github/<%= props.github %>/<%= props.name %>/master/<%= props.name %>.html?gzip=true
 [webcomponents-badge]: https://img.shields.io/badge/webcomponents.org-published-blue.svg
-[webcomponents-url]: https://www.webcomponents.org/element/<%= props.github %>/<%= props.name %>.svg
+[webcomponents-url]: https://www.webcomponents.org/element/<%= props.github %>/<%= props.name %>
