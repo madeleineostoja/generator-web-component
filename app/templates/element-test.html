@@ -3,10 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title><%= props.name %></title>
-    <script src="../../webcomponentsjs/webcomponents.min.js"></script>
+
+    <!-- Setup WCT -->
+    <script src="https://unpkg.com/webcomponents.js@^0.7.24/webcomponents-lite.min.js"></script>
     <script src="../../web-component-tester/browser.js"></script>
 
-    <!-- Import the element to test -->
+    <!-- Import <%= props.name %>  -->
     <link rel="import" href="../<%= props.name %>.html">
 
   </head>
