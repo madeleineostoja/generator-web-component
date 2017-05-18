@@ -5,7 +5,8 @@
     <title><%= props.name %></title>
 
     <!-- Setup WCT -->
-    <script src="https://unpkg.com/webcomponents.js@^0.7.24/webcomponents-lite.min.js"></script>
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@^1.0.0/custom-elements-es5-adapter.js"></script>
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@^1.0.0/webcomponents-loader.js"></script>
     <script src="../../web-component-tester/browser.js"></script>
 
     <!-- Import <%= props.name %>  -->
@@ -29,7 +30,6 @@
         it('is okay', function() {
           expect(component).to.be.ok;
         });
-
       });
     </script>
   </body>

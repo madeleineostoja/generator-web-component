@@ -1,4 +1,4 @@
-<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../polymer/polymer-element.html">
 
 <dom-module id="<%= props.name %>">
   <template>
@@ -17,12 +17,21 @@
   </template>
 
   <script>
-    Polymer({
-      is: '<%= props.name %>',
-
-      properties: {
-
+    class <%= props.class %> extends Polymer.Element {
+      static get is() {
+        return '<%= props.name %>';
       }
-    });
+
+      static get properties() {
+        return {
+
+        }
+      }
+
+      constructor() {
+        super();
+      }
+    }
+    customElements.define(<%= props.class %>.is, <%= props.class %>);
   </script>
 </dom-module>

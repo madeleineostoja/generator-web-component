@@ -110,11 +110,9 @@ gulp.task('build', () => {
 
 wct.gulp.init(gulp);
 
-gulp.task('serve', () => bs.init(OPTIONS.browserSync));
+gulp.task('demo', () => bs.init(OPTIONS.browserSync));
 gulp.task('refresh', () => bs.reload());
-
 gulp.task('test', ['build', 'test:local']);
-
 gulp.task('watch', () => gulp.watch(['src/**/*'], () => gulprun('build', 'refresh')));
 
-gulp.task('default', ['build', 'serve', 'watch']);
+gulp.task('default', ['build', 'demo', 'watch']);

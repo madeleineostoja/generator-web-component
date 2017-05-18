@@ -68,7 +68,7 @@ module.exports = class extends Yeoman {
     );
 
     // Write & rename element test
-+   this.fs.copyTpl(
+    this.fs.copyTpl(
       this.templatePath('element-test.html'),
       this.destinationPath('test/' + this.props.name + '.html'),
       this

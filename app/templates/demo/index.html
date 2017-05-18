@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
     <title><%= props.name %> Demo</title>
 
-    <!-- Setup demo page -->
-    <script src="https://unpkg.com/webcomponents.js@^0.7.24/webcomponents-lite.min.js"></script>
-    <script>
-      window.Polymer = { dom: 'shadow' };
-    </script>
+    <!-- Import demo page deps -->
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@^1.0.0/custom-elements-es5-adapter.js"></script>
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@^1.0.0/webcomponents-loader.js"></script>
     <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
 
     <!-- Import <%= props.name %> -->

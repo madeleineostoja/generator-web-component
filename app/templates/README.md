@@ -1,11 +1,15 @@
 # <%= props.name %>
-![Version][bower-badge] [![Build status][travis-badge]][travis-url] [![Bower dependencies][bowerdeps-badge]][bowerdeps-url] ![Size][size-badge] [![Published][webcomponents-badge]][webcomponents-url]
+[![Version][npm-badge]][npm-url] [![Build status][travis-badge]][travis-url] ![Size][size-badge] [![Published][webcomponents-badge]][webcomponents-url]
 
 <%= props.description %>
 
 ## Installation & usage
 
-Install <%= props.name %> with Bower
+Install <%= props.name %> with [Yarn](https://yarnpkg.com) or [Bower](https://bower.io)
+
+```sh
+$ yarn add <%= props.name %> --flat
+```
 
 ```sh
 $ bower install <%= props.github %>/<%= props.name %> --save
@@ -24,22 +28,22 @@ Then use <%= props.name %> in your project
 ```
 
 ### Polyfills for cross-browser support
-<%= props.name %>> relies on emerging standards, for full cross-browser support include the [Web Components Lite](https://github.com/webcomponents/webcomponentsjs) polyfill. 
+
+<%= props.name %>> relies on emerging standards, for full cross-browser support include the [WebComponentsJS](https://github.com/webcomponents/webcomponentsjs) polyfill on your page.
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.24/webcomponents-lite.min.js"></script>
+<script src="https://unpkg.com/@webcomponents/webcomponentsjs@^1.0.0/custom-elements-es5-adapter.js"></script>
+<script src="https://unpkg.com/@webcomponents/webcomponentsjs@^1.0.0/webcomponents-loader.js"></script>
 ```
 
----
+***
 
 MIT © <%= props.author %>
 
-[bower-badge]: https://img.shields.io/bower/v/<%= props.name %>.svg
-[bowerlicense-badge]: https://img.shields.io/bower/l/<%= props.name %>.svg
+[npm-badge]: https://img.shields.io/npm/v/<%= props.name %>.svg
+[npm-url]: https://www.npmjs.com/package/<%= props.name %>
 [travis-badge]: https://img.shields.io/travis/<%= props.github %>/<%= props.name %>.svg
 [travis-url]: https://travis-ci.org/<%= props.github %>/<%= props.name %>
-[bowerdeps-badge]: https://img.shields.io/gemnasium/<%= props.github %>/<%= props.name %>.svg
-[bowerdeps-url]: https://gemnasium.com/bower/<%= props.name %>
 [size-badge]: https://badges.herokuapp.com/size/github/<%= props.github %>/<%= props.name %>/master/<%= props.name %>.html?gzip=true
 [webcomponents-badge]: https://img.shields.io/badge/webcomponents.org-published-blue.svg
 [webcomponents-url]: https://www.webcomponents.org/element/<%= props.github %>/<%= props.name %>

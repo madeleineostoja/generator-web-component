@@ -9,7 +9,8 @@
   "author": "<%= props.author %>",
   "license": "MIT",
   "keywords": [
-    "web components",
+    "web-components",
+    "custom-element",
     "<%= props.name %>"
   ],
   "repository": {
@@ -24,8 +25,11 @@
     "not Explorer < 11",
     "not ExplorerMobile < 11"
   ],
+  "dependencies": {
+    "@polymer/polymer": "^2.0.0"
+  },
   "devDependencies": {
-    "autoprefixer": "^6.0.0",
+    "autoprefixer": "^7.1.1",
     "babel-core": "^6.2.1",
     "babel-eslint": "^7.1.1",
     "babel-plugin-external-helpers": "^6.22.0",
@@ -39,7 +43,7 @@
     "gulp-inline-source": "^3.0.0",
     "gulp-notify": "^3.0.0",
     "gulp-plumber": "^1.0.0",
-    "gulp-postcss": "^6.1.0",
+    "gulp-postcss": "^7.0.0",
     "gulp-process-inline": "^0.1.1",
     "gulp-rollup-file": "^0.1.0",
     "gulp-size": "^2.0.0",
@@ -50,7 +54,7 @@
     "rollup-plugin-uglify": "^1.0.2",
     "run-sequence": "^1.1.5",
     "uglify-js-harmony": "^2.7.5",
-    "web-component-tester": "^5.0.0",
-    "yargs": "^7.1.0"
+    "web-component-tester": "^6.0.0",
+    "yargs": "^8.0.1"
   }
 }

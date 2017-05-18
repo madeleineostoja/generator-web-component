@@ -1,13 +1,11 @@
 # Polymer Element Generator 
-[![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url]
+[![NPM version][npm-badge]][npm-url] [![Dependency Status][deps-badge]][deps-url]
 
-Quickly scaffold and develop modern [Polymer][polymer] elements with [Yeoman][yeoman], with full ES6 and Polymer 1.8/2.0 hybrid support.
+Quickly scaffold and develop modern [Polymer][polymer] elements with [Yeoman][yeoman], with full ES6, Polymer 2, Web Components v1, and Yarn support.
 
 The generator comes bundled with a [Gulp][gulp] buildstep which includes [Babel][babel], [Rollup][rollup], [PostCSS][postcss], inline asset processing, and [BrowserSync][browsersync].
 
---
-
-### Installation & usage
+## Installation & usage
 
 Install Yeoman and the element generator
 
@@ -61,10 +59,10 @@ You can serve your element locally with BrowserSync. Just run `gulp serve`, or t
 
 MIT © [Sean King](https://github.com/seaneking)
 
-[npm-image]: https://badge.fury.io/js/generator-polymer-element.svg
+[npm-badge]: https://img.shields.io/npm/v/generator-polymer-element.svg
 [npm-url]: https://npmjs.org/package/generator-polymer-element
-[daviddm-image]: https://david-dm.org/seaneking/generator-polymer-element.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/seaneking/generator-polymer-element
+[deps-badge]: https://img.shields.io/david/seaneking/generator-polymer-element.svg
+[deps-url]: https://david-dm.org/seaneking/generator-polymer-element
 
 [yeoman]: http://yeoman.io
 [polymer]: http://polymer-project.org

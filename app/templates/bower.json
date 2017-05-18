@@ -6,8 +6,8 @@
   ],
   "description": "<%= props.description %>",
   "keywords": [
-    "web-component",
-    "polymer",
+    "web-components",
+    "custom-element",
     "<%= props.name %>"
   ],
   "main": "<%= props.name %>.html",
@@ -23,10 +23,10 @@
     "!LICENSE"
   ],
   "dependencies": {
-    "polymer": "^1.8.0"
+    "polymer": "^2.0.0"
   },
   "devDependencies": {
-    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.2.5",
-    "web-component-tester": "^4.0.0"
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
+    "web-component-tester": "^6.0.0"
   }
 }
