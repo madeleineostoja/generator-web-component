@@ -1,20 +1,21 @@
 {
   "name": "generator-polymer-element",
   "version": "0.5.8",
-  "description": "Quickly scaffold Polymer elements with Yeoman",
+  "description": "Quickly scaffold lightweight Polymer 2 elements with Yeoman",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "seaneking/generator-polymer-element",
   "author": {
     "name": "Sean King",
-    "email": "sean@simpla.io",
-    "url": "https://github.com/seaneking"
+    "email": "sean@seaneking.org",
+    "url": "https://twitter.com/seaneking"
   },
   "files": [
     "app"
   ],
   "keywords": [
     "yeoman-generator",
+    "web-components",
     "polymer"
   ],
   "dependencies": {

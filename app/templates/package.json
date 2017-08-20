@@ -21,13 +21,13 @@
     "url": "https://github.com/<%= props.github %>/<%= props.name %>/issues"
   },
   "browserslist": [
-    "last 2 versions",
-    "not Explorer < 11",
-    "not ExplorerMobile < 11"
+    "last 2 Chrome versions",
+    "last 2 Safari versions",
+    "last 2 ios versions",
+    "last 2 Edge versions",
+    "last 2 Firefox versions"<% if (props.useES5) { %>,
+    "last 1 Explorer versions"<% } %>
   ],
-  "dependencies": {
-    "@polymer/polymer": "^2.0.0"
-  },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
     "babel-core": "^6.2.1",
@@ -49,11 +49,9 @@
     "gulp-size": "^2.0.0",
     "rollup-plugin-babel": "^2.6.0",
     "rollup-plugin-commonjs": "^8.0.2",
-    "rollup-plugin-conditional": "^1.1.1",
     "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-plugin-uglify": "^1.0.2",
     "run-sequence": "^1.1.5",
-    "uglify-js-harmony": "^2.7.5",
+    "uglify-es": "^3.0.23",
     "web-component-tester": "^6.0.0",
     "yargs": "^8.0.1"
   }

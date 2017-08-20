@@ -5,14 +5,10 @@
 
 ## Installation & usage
 
-Install <%= props.name %> with [Yarn](https://yarnpkg.com) or [Bower](https://bower.io)
+Install <%= props.name %> with Bower
 
 ```sh
-$ yarn add <%= props.name %> --flat
-```
-
-```sh
-$ bower install <%= props.github %>/<%= props.name %> --save
+$ bower i <%= props.github %>/<%= props.name %> --save
 ```
 
 Import it into the `<head>` of your page
@@ -29,11 +25,11 @@ Then use <%= props.name %> in your project
 
 ### Polyfills for cross-browser support
 
-<%= props.name %>> relies on emerging standards, for full cross-browser support include the [WebComponentsJS](https://github.com/webcomponents/webcomponentsjs) polyfill on your page.
+<%= props.name %> relies on emerging standards, for full cross-browser support include the [WebComponentsJS](https://github.com/webcomponents/webcomponentsjs) polyfill on your page.
 
 ```html
-<script src="https://unpkg.com/@webcomponents/webcomponentsjs@^1.0.0/custom-elements-es5-adapter.js"></script>
-<script src="https://unpkg.com/@webcomponents/webcomponentsjs@^1.0.0/webcomponents-loader.js"></script>
+<% if (props.useES5) { %><script src="https://unpkg.com/@webcomponents/webcomponentsjs@^1.0.0/custom-elements-es5-adapter.js"></script>
+<% } %><script src="https://unpkg.com/@webcomponents/webcomponentsjs@^1.0.0/webcomponents-loader.js"></script>
 ```
 
 ***

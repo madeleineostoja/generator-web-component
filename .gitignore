@@ -1,1 +1,6 @@
+# Deps
 node_modules
+
+# Runtime
+.DS_Store
+*.log

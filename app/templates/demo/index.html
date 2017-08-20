@@ -6,8 +6,8 @@
     <title><%= props.name %> Demo</title>
 
     <!-- Import demo page deps -->
-    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@^1.0.0/custom-elements-es5-adapter.js"></script>
-    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@^1.0.0/webcomponents-loader.js"></script>
+    <% if (props.useES5) { %><script src="https://unpkg.com/@webcomponents/webcomponentsjs@^1.0.0/custom-elements-es5-adapter.js"></script>
+    <% } %><script src="https://unpkg.com/@webcomponents/webcomponentsjs@^1.0.0/webcomponents-loader.js"></script>
     <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
 
     <!-- Import <%= props.name %> -->

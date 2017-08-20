@@ -3,6 +3,16 @@
     [
       "env",
       {
+        "targets": {
+          "browsers": [
+            "last 2 Chrome versions",
+            "last 2 Safari versions",
+            "last 2 ios versions",
+            "last 2 Edge versions",
+            "last 2 Firefox versions"<% if (props.useES5) { %>,
+            "last 1 Explorer versions"<% } %>
+          ]
+        },
         "modules": false
       }
     ]

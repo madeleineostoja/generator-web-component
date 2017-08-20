@@ -5,8 +5,8 @@
     <title><%= props.name %></title>
 
     <!-- Setup WCT -->
-    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@^1.0.0/custom-elements-es5-adapter.js"></script>
-    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@^1.0.0/webcomponents-loader.js"></script>
+    <% if (props.useES5) { %><script src="https://unpkg.com/@webcomponents/webcomponentsjs@^1.0.0/custom-elements-es5-adapter.js"></script>
+    <% } %><script src="https://unpkg.com/@webcomponents/webcomponentsjs@^1.0.0/webcomponents-loader.js"></script>
     <script src="../../web-component-tester/browser.js"></script>
 
     <!-- Import <%= props.name %>  -->
@@ -14,18 +14,18 @@
 
   </head>
   <body>
+
     <test-fixture id="default">
       <template>
         <<%= props.name %>></<%= props.name %>>
       </template>
     </test-fixture>
+
     <script>
-      describe('<<%= props.name %>>', function() {
+      describe('<<%= props.name %>>', () => {
         var component;
 
-        beforeEach(function() {
-          component = fixture('default');
-        });
+        beforeEach(() => component = fixture('default'));
 
         it('is okay', function() {
           expect(component).to.be.ok;

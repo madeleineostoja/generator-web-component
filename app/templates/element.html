@@ -1,5 +1,5 @@
-<link rel="import" href="../polymer/polymer-element.html">
-
+<% if (props.type === 'standalone') { %><link rel="import" href="../polymer/polymer-element.html">
+<% } %><% if (props.includeTemplate) { %>
 <dom-module id="<%= props.name %>">
   <template>
     <style>
@@ -15,23 +15,20 @@
     </style>
 
   </template>
+</dom-module>
 
-  <script>
-    class <%= props.class %> extends Polymer.Element {
-      static get is() {
-        return '<%= props.name %>';
-      }
+<% } %><script>
+  class <%= props.class %> extends Polymer.Element {
+    static get is() {
+      return '<%= props.name %>';
+    }
 
-      static get properties() {
-        return {
+    static get properties() {
+      return {
 
-        }
-      }
-
-      constructor() {
-        super();
       }
     }
-    customElements.define(<%= props.class %>.is, <%= props.class %>);
-  </script>
-</dom-module>
+  }
+
+  customElements.define(<%= props.class %>.is, <%= props.class %>);
+</script>

@@ -1,7 +1,4 @@
-/*eslint one-var: 0 */
-
 // Core deps
-// Use require() because of rollup
 const gulp = require('gulp');
 const notify = require('gulp-notify');
 const gulpif = require('gulp-if');
@@ -20,12 +17,10 @@ const minify = require('gulp-htmlmin');
 // JS
 const eslint = require('gulp-eslint');
 const rollup = require('gulp-rollup-file');
-const rollupif = require('rollup-plugin-conditional');
 const resolve = require('rollup-plugin-node-resolve');
 const commonJs = require('rollup-plugin-commonjs');
 const babel = require('rollup-plugin-babel');
-const uglify = require('rollup-plugin-uglify');
-const uglifyHarmony = require('uglify-js-harmony').minify;
+const uglify = require('uglify-es').minify;
 
 // CSS
 const postcss = require('gulp-postcss');
@@ -33,7 +28,7 @@ const autoprefixer = require('autoprefixer');
 
 const bs = browserSync.create(),
       argv = yargs.boolean(['debug']).argv,
-      errorNotifier = () => plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }),
+      errorNotifier = () => plumber({ errorHandler: notify.onError('Gulp error') }),
       OPTIONS = {
         rollup: {
           plugins: [
@@ -41,10 +36,7 @@ const bs = browserSync.create(),
             commonJs(),
             babel({
               exclude: 'node_modules/**/*'
-            }),
-            rollupif(!argv.debug, [
-              uglify({}, uglifyHarmony )
-            ])
+            })
           ],
           format: 'iife'
         },
@@ -64,7 +56,7 @@ const bs = browserSync.create(),
           keepClosingSlash: true,
           customAttrAssign: [/\$=/],
           minifyCSS: true,
-          minifyJS: false
+          minifyJS: text => uglify(text).code
         },
         browserSync: {
           server: {
