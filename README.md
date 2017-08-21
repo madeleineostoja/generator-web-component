@@ -1,4 +1,4 @@
-# Polymer Element Generator [![NPM version][npm-badge]][npm-url]
+# Web Component Generator [![NPM version][npm-badge]][npm-url]
 
 Quickly scaffold modern, lightweight web components with [Yeoman][yeoman]. Choose whether to bundle a framework like [Polymer][polymer], whether to create a standalone project or a single file for use inside apps, whether to to support ES5 transpilation, and whether to include a template boilerplate.
 
