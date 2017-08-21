@@ -7,6 +7,10 @@ function isStandalone(props) {
   return props.type === 'standalone';
 }
 
+function isPolymer(props) {
+  return props.framework === 'polymer';
+}
+
 function generateClassName(name) {
   return name.split('-').reduce((previous, part) => {
     return previous + part.charAt(0).toUpperCase() + part.slice(1);
@@ -32,6 +36,16 @@ const PROMPTS = [
     validate: str => /^([a-z])(?!.*[<>])(?=.*-).+$/.test(str)
   },
   {
+    name: 'framework',
+    type: 'list',
+    choices: [
+      { name: 'Polymer 2', value: 'polymer' },
+      { name: 'No framework', value: 'none' }
+    ],
+    required: true,
+    message: 'Which WC framework do you want to include?'
+  },
+  {
     name: 'description',
     when: isStandalone,
     type: 'input',
@@ -39,6 +53,7 @@ const PROMPTS = [
   },
   {
     name: 'includeTemplate',
+    when: isPolymer,
     type: 'confirm',
     message: 'Will your element need a shadow DOM template?',
     default: true
@@ -66,7 +81,7 @@ const PROMPTS = [
   }
 ];
 
-class GeneratorPolymerElement extends Yeoman {
+class GeneratorWebComponent extends Yeoman {
 
   prompting() {
     const done = this.async();
@@ -81,7 +96,7 @@ class GeneratorPolymerElement extends Yeoman {
     const { name, type } = this.props;
 
     // Build component class
-    this.props.class = generateClassName(name)
+    this.props.class = generateClassName(name);
 
     // Ensure component is in its own directory if standalone
     if (type === 'standalone' && path.basename(this.destinationPath()) !== name) {
@@ -93,7 +108,7 @@ class GeneratorPolymerElement extends Yeoman {
 
   writing() {
     const { name } = this.props,
-          elementPath = isStandalone(this.props) ? `src/${name}.html` : `${name}.html`;
+        elementPath = isStandalone(this.props) ? `src/${name}.html` : `${name}.html`;
 
     // Write & rename element src
     this.fs.copyTpl(
@@ -125,6 +140,6 @@ class GeneratorPolymerElement extends Yeoman {
   install() {
     isStandalone(this.props) && this.installDependencies();
   }
-};
+}
 
-module.exports = GeneratorPolymerElement;
+module.exports = GeneratorWebComponent;

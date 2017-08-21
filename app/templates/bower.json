@@ -21,10 +21,11 @@
     "!src",
     "!*.html",
     "!LICENSE"
-  ],
+  ],<% if (props.framework === 'polymer' ) { %>
   "dependencies": {
     "polymer": "^2.0.0"
   },
+  <% } %>
   "devDependencies": {
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
     "web-component-tester": "^6.0.0"

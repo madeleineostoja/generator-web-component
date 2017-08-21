@@ -1,4 +1,4 @@
-<% if (props.type === 'standalone') { %><link rel="import" href="../polymer/polymer-element.html">
+<% if (props.type === 'standalone' && props.framework === 'polymer') { %><link rel="import" href="../polymer/polymer-element.html">
 <% } %><% if (props.includeTemplate) { %>
 <dom-module id="<%= props.name %>">
   <template>
@@ -18,17 +18,17 @@
 </dom-module>
 
 <% } %><script>
-  class <%= props.class %> extends Polymer.Element {
-    static get is() {
-      return '<%= props.name %>';
-    }
-
-    static get properties() {
-      return {
-
-      }
-    }
+class <%= props.class %> extends <% if (props.framework === 'polymer' ) { %>Polymer.Element<% } else { %>HTMLElement<% } %> {
+  static get is() {
+    return '<%= props.name %>';
   }
+  <% if (props.framework === 'polymer' ) { %>
+  static get properties() {
+    return {
 
-  customElements.define(<%= props.class %>.is, <%= props.class %>);
+    };
+  }<% } %>
+}
+
+customElements.define(<%= props.class %>.is, <%= props.class %>);
 </script>

@@ -1,10 +1,10 @@
 {
-  "name": "generator-polymer-element",
+  "name": "generator-web-component",
   "version": "1.0.0",
-  "description": "Quickly scaffold lightweight Polymer 2 elements with Yeoman",
+  "description": "Quickly scaffold web components with Yeoman",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "seaneking/generator-polymer-element",
+  "repository": "seaneking/generator-web-component",
   "author": {
     "name": "Sean King",
     "email": "sean@seaneking.org",
@@ -15,8 +15,7 @@
   ],
   "keywords": [
     "yeoman-generator",
-    "web-components",
-    "polymer"
+    "web-components"
   ],
   "dependencies": {
     "yeoman-generator": "^1.0.0"

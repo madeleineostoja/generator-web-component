@@ -1,16 +1,16 @@
 # Polymer Element Generator [![NPM version][npm-badge]][npm-url]
 
-Quickly scaffold modern, lightweight Polymer 2 elements with [Yeoman][yeoman], either as standalone projects or a single file for use inside apps.
+Quickly scaffold modern, lightweight web components with [Yeoman][yeoman]. Choose whether to bundle a framework like [Polymer][polymer], whether to create a standalone project or a single file for use inside apps, whether to to support ES5 transpilation, and whether to include a template boilerplate.
 
-Standalone elements come bundled with [Gulp][gulp], [Babel][babel], [Rollup][rollup], [PostCSS][postcss], inline processing, and [BrowserSync][browsersync]. All elements have optional ES6-only support and an optional template boilerplate.
+Standalone components come bundled with [Gulp][gulp], [Babel][babel], [Rollup][rollup], [PostCSS][postcss], inline processing, and [BrowserSync][browsersync]. Components are distributed as HTML files.
 
 Check out the files in `app/templates` in this repo for a better idea of what you'll get.
 
 ### Contents
 
 - [Installation & usage](#installation--usage)
-- [Elements for apps](#elements-for-apps)
-- [Standalone elements](#standalone-elements)
+- [Components for apps](#components-for-apps)
+- [Standalone components](#standalone-components)
     - [Inline processing](#inline-processing)
     - [Module bundling](#module-bundling)
     - [Serving locally](#serving-locally)
@@ -18,26 +18,25 @@ Check out the files in `app/templates` in this repo for a better idea of what yo
 
 ## Installation & usage
 
-Install Yeoman and the element generator with NPM or Yarn
+Install Yeoman and the component generator with NPM or Yarn
 
 ```sh
-$ npm i -g yo generator-polymer-element
+$ npm i -g yo generator-web-component
 ```
 
 Then run it
 
 ```sh
-$ yo polymer-element
+$ yo web-component
 ```
 
-## Elements for apps
+## Components for apps
 
-To create a new element for use inside a Polymer app, just select `'Part of an app'` when prompted. This will generate a single HTML file under the name of your element with a minimal Polymer 2 boilerplate setup.
+To create a new web component for use inside a web app, select `'Part of an app'` when prompted. This will generate a single HTML file under the name of your element with the bare minimum of boilerplate.
 
+## Standalone components
 
-## Standalone elements
-
-To create a standalone element for distribution in its own repo, select `'Standalone'` when prompted. This will scaffold out a lightweight, modern Polymer element project, including a buildstep, conditional transpilation, module bundling, PostCSS processing, and more.
+To create a standalone element for distribution in its own repo, select `'Standalone'` when prompted. This will scaffold out a modern web component project, including a Gulp buildstep, browser-aware babel transpilation, Rollup module bundling, PostCSS processing, and more.
 
 Your element lives in the `src` folder and is compiled to the project root by Gulp. To build it run `gulp build`, or the default `gulp` task on your command line.
 
@@ -85,6 +84,7 @@ MIT © [Sean King](https://twitter.com/seaneking)
 [npm-url]: https://npmjs.org/package/generator-polymer-element
 
 [yeoman]: http://yeoman.io
+[polymer]: https://polymer-project.org
 [gulp]: https://gulpjs.com
 [postcss]: https://github.com/postcss/postcss
 [babel]: http://babeljs.io
