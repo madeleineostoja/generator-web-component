@@ -28,8 +28,17 @@ Then use <%= props.name %> in your project
 <%= props.name %> relies on emerging standards, for full cross-browser support include the [WebComponentsJS](https://github.com/webcomponents/webcomponentsjs) polyfill on your page.
 
 ```html
-<% if (props.useES5) { %><script src="https://unpkg.com/@webcomponents/webcomponentsjs@^1.0.0/custom-elements-es5-adapter.js"></script>
-<% } %><script src="https://unpkg.com/@webcomponents/webcomponentsjs@^1.0.0/webcomponents-loader.js"></script>
+<script src="https://unpkg.com/@webcomponents/webcomponentsjs@^1.0.0/webcomponents-loader.js"></script>
+```
+
+### Transpiling for IE11 support
+
+Web Components like <%= props.name %> are distributed as ES6 classes, which are supported in all evergreen browsers. To support Internet Explorer 11 you should transpile <%= props.name %> to ES5 and use the `webcomponentsjs` `custom-elements-es5-adapter.js` shim. 
+
+The easiest way to do this is by including [polymer-build][polymer-build] in your buildstep of choice. Then just include the ES5 adapter on your page
+
+```html
+<script src="https://unpkg.com/@webcomponents/webcomponentsjs@^1.0.0/custom-elements-es5-adapter.js"></script>
 ```
 
 ***
@@ -43,3 +52,4 @@ MIT © <%= props.author %>
 [size-badge]: https://badges.herokuapp.com/size/github/<%= props.github %>/<%= props.name %>/master/<%= props.name %>.html?gzip=true
 [webcomponents-badge]: https://img.shields.io/badge/webcomponents.org-published-blue.svg
 [webcomponents-url]: https://www.webcomponents.org/element/<%= props.github %>/<%= props.name %>
+[polymer-build]: https://github.com/Polymer/polymer-build
