@@ -1,6 +1,6 @@
 {
   "name": "generator-web-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Quickly scaffold web components with Yeoman",
   "license": "MIT",
   "main": "app/index.js",
