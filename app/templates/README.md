@@ -49,7 +49,7 @@ MIT © <%= props.author %>
 [releases-url]: https://github.com/<%= props.github %>/<%= props.name %>/releases
 [travis-badge]: https://img.shields.io/travis/<%= props.github %>/<%= props.name %>.svg
 [travis-url]: https://travis-ci.org/<%= props.github %>/<%= props.name %>
-[size-badge]: https://badges.herokuapp.com/size/github/<%= props.github %>/<%= props.name %>/master/<%= props.name %>.html?gzip=true
+[size-badge]: http://img.badgesize.io/<%= props.github %>/<%= props.name %>/master/simple-button.html?compression=gzip&label=size%20%28unminified%29
 [webcomponents-badge]: https://img.shields.io/badge/webcomponents.org-published-blue.svg
 [webcomponents-url]: https://www.webcomponents.org/element/<%= props.github %>/<%= props.name %>
 [polymer-build]: https://github.com/Polymer/polymer-build
