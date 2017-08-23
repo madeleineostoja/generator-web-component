@@ -27,77 +27,77 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 
 const bs = browserSync.create(),
-      argv = yargs.boolean(['debug']).argv,
-      errorNotifier = () => plumber({ errorHandler: notify.onError('Gulp error') }),
-      OPTIONS = {
-        rollup: {
-          plugins: [
-            resolve({ main: true, browser: true }),
-            commonJs(),
-            babel({
-              exclude: 'node_modules/**/*'
-            })
-          ],
-          format: 'iife'
-        },
-        postcss: [
-          autoprefixer()
+    argv = yargs.boolean(['debug']).argv,
+    errorNotifier = () => plumber({ errorHandler: notify.onError('Gulp error') }),
+    OPTIONS = {
+      rollup: {
+        plugins: [
+          resolve({ main: true, browser: true }),
+          commonJs(),
+          babel({
+            exclude: 'node_modules/**/*'
+          })
         ],
-        inline: {
-          compress: false,
-          swallowErrors: true
+        format: 'iife'
+      },
+      postcss: [
+        autoprefixer()
+      ],
+      inline: {
+        compress: false,
+        swallowErrors: true
+      },
+      HTMLmin: {
+        removeComments: true,
+        removeCommentsFromCDATA: true,
+        collapseWhitespace: true,
+        conservativeCollapse: true,
+        caseSensitive: true,
+        keepClosingSlash: true,
+        customAttrAssign: [/\$=/],
+        minifyCSS: true,
+        minifyJS: text => uglify(text).code
+      },
+      browserSync: {
+        server: {
+          baseDir: './',
+          index: 'demo/index.html',
+          routes: {
+            '/': './bower_components'
+          }
         },
-        HTMLmin: {
-          removeComments: true,
-          removeCommentsFromCDATA: true,
-          collapseWhitespace: true,
-          conservativeCollapse: true,
-          caseSensitive: true,
-          keepClosingSlash: true,
-          customAttrAssign: [/\$=/],
-          minifyCSS: true,
-          minifyJS: text => uglify(text).code
-        },
-        browserSync: {
-          server: {
-            baseDir: './',
-            index: 'demo/index.html',
-            routes: {
-              '/': './bower_components'
-            }
-          },
-          open: false,
-          notify: false
-        }
-      };
+        open: false,
+        notify: false
+      }
+    };
 
 gulp.task('build', () => {
   let styles = processInline(),
       scripts = processInline();
 
   return gulp.src(['src/*.html'])
-          .pipe(errorNotifier())
+    .pipe(errorNotifier())
 
-          // Inline assets
-          .pipe(inline(OPTIONS.inline))
+    // Inline assets
+    .pipe(inline(OPTIONS.inline))
 
-          // JS
-          .pipe(scripts.extract('script'))
-            .pipe(eslint())
-            .pipe(eslint.format())
-            .pipe(gulpif(!argv.debug, eslint.failAfterError()))
-            .pipe(rollup(OPTIONS.rollup))
-          .pipe(scripts.restore())
+    // JS
+    .pipe(scripts.extract('script'))
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(gulpif(!argv.debug, eslint.failAfterError()))
+    .pipe(rollup(OPTIONS.rollup))
+    .pipe(scripts.restore())
 
-          // CSS
-          .pipe(styles.extract('style'))
-            .pipe(postcss(OPTIONS.postcss))
-          .pipe(styles.restore())
+    // CSS
+    .pipe(styles.extract('style'))
+    .pipe(postcss(OPTIONS.postcss))
+    .pipe(styles.restore())
 
-          .pipe(gulpif(!argv.debug, minify(OPTIONS.HTMLmin)))
+    .pipe(gulpif(!argv.debug, minify(OPTIONS.HTMLmin)))
 
-          .pipe(size({ gzip: true }))
-        .pipe(gulp.dest('.'))
+    .pipe(size({ gzip: true }))
+    .pipe(gulp.dest('.'));
 });
 
 wct.gulp.init(gulp);
