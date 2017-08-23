@@ -36,6 +36,12 @@ const PROMPTS = [
     validate: str => /^([a-z])(?!.*[<>])(?=.*-).+$/.test(str)
   },
   {
+    name: 'description',
+    when: isStandalone,
+    type: 'input',
+    message: 'Tell me all about it...'
+  },
+  {
     name: 'framework',
     type: 'list',
     choices: [
@@ -44,12 +50,6 @@ const PROMPTS = [
     ],
     required: true,
     message: 'Which WC framework do you want to include?'
-  },
-  {
-    name: 'description',
-    when: isStandalone,
-    type: 'input',
-    message: 'Tell me all about it...'
   },
   {
     name: 'includeTemplate',
