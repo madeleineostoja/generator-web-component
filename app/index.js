@@ -100,13 +100,12 @@ class GeneratorWebComponent extends Yeoman {
   }
 
   writing() {
-    const { name } = this.props,
-        elementPath = isStandalone(this.props) ? `src/${name}.html` : `${name}.html`;
+    const { name } = this.props;
 
     // Write & rename element src
     this.fs.copyTpl(
       this.templatePath('element.html'),
-      this.destinationPath(elementPath),
+      this.destinationPath(`${name}.html`),
       this
     );
 
