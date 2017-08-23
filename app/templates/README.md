@@ -1,5 +1,5 @@
 # <%= props.name %>
-[![Version][release-badge]][releases-url] [![Build status][travis-badge]][travis-url] ![Size][size-badge] [![Published][webcomponents-badge]][webcomponents-url]
+[![Build status][travis-badge]][travis-url] ![Size][size-badge] [![Version][tag-badge]][releases-url] [![Published][webcomponents-badge]][webcomponents-url]
 
 <%= props.description %>
 
@@ -45,7 +45,7 @@ The easiest way to do this is by including [polymer-build][polymer-build] in you
 
 MIT © <%= props.author %>
 
-[release-badge]: https://img.shields.io/github/release/<%= props.github %>/<%= props.name %>.svg
+[tag-badge]: https://img.shields.io/github/tag/<%= props.github %>/<%= props.name %>.svg
 [releases-url]: https://github.com/<%= props.github %>/<%= props.name %>/releases
 [travis-badge]: https://img.shields.io/travis/<%= props.github %>/<%= props.name %>.svg
 [travis-url]: https://travis-ci.org/<%= props.github %>/<%= props.name %>
