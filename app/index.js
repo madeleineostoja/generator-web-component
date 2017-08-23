@@ -59,13 +59,6 @@ const PROMPTS = [
     default: true
   },
   {
-    name: 'useES5',
-    when: isStandalone,
-    type: 'confirm',
-    message: 'Will you compile your element to ES5?',
-    default: true
-  },
-  {
     name: 'author',
     when: isStandalone,
     type: 'input',

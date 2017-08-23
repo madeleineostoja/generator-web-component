@@ -1,20 +1,24 @@
 # Web Component Generator [![NPM version][npm-badge]][npm-url]
 
-Quickly scaffold modern, lightweight web components with [Yeoman][yeoman]. Choose whether to bundle a framework like [Polymer][polymer], whether to create a standalone project or a single file for use inside apps, whether to to support ES5 transpilation, and whether to include a template boilerplate.
-
-Standalone components come bundled with [Gulp][gulp], [Babel][babel], [Rollup][rollup], [PostCSS][postcss], inline processing, and [BrowserSync][browsersync]. Components are distributed as HTML files.
-
-Check out the files in `app/templates` in this repo for a better idea of what you'll get.
+Quickly scaffold lightweight web components with [Yeoman][yeoman], with just what's needed and none of the cruft. Built against the v1 Web Components spec.
 
 ### Contents
 
+<!-- MarkdownTOC -->
+
+- [Features](#features)
 - [Installation & usage](#installation--usage)
 - [Components for apps](#components-for-apps)
 - [Standalone components](#standalone-components)
-    - [Inline processing](#inline-processing)
-    - [Module bundling](#module-bundling)
-    - [Serving locally](#serving-locally)
 
+## Features
+
+- Generate standalone projects for distribution, or single file elements inside your own apps
+- Choose whether to bundle a framework like [Polymer][polymer] or build barebones
+- Optionally include Shadow DOM template boilerplate
+- Standalone projects come with a basic testing setup via [Web Component Tester][wct] and a beautiful demo page served with [browsersync][browsersync]
+
+Check out the files in `app/templates` in this repo for a better idea of what you'll get.
 
 ## Installation & usage
 
@@ -36,45 +40,40 @@ To create a new web component for use inside a web app, select `'Part of an app'
 
 ## Standalone components
 
-To create a standalone element for distribution in its own repo, select `'Standalone'` when prompted. This will scaffold out a modern web component project, including a Gulp buildstep, browser-aware babel transpilation, Rollup module bundling, PostCSS processing, and more.
+To create a standalone element project in its own repo, select `'Standalone'` when prompted. This will scaffold out a modern Web Component project, including a lightweight testing setup, a beautiful demo page, and standard config files.
 
-Your element lives in the `src` folder and is compiled to the project root by Gulp. To build it run `gulp build`, or the default `gulp` task on your command line.
+It's recommended to build your element as an ES6 class directly in the `[element-name].html` file provided (or change it to a JavaScript file if you like), and allow the consumers of your element to do their own transpilation to ES5 if they want to support legacy browsers.
 
-### Inline processing 
+The following NPM scripts will be configured for you:
 
-You can write Javascript and styles directly inline, or split them into files and get Gulp to inline them by adding an `inline` property to link and script tags.
+Script     | Description                                                                                                           
+---------- | -----------                                                                                                           
+`test`     | Runs your WCT test suite in local browsers                                                                            
+`posttest` | Runs Eslint after tests (eg: for Travis)                                                                              
+`demo`     | Runs a demo server (with Browsersync) which reloads whenever you make changes in your component
 
-```html
-<!-- Inline assets with Gulp -->
-<link rel="stylesheet" src="./my-element.css" inline>
-<script src="./my-element.js" inline></script>
+Run the scripts with NPM
+
+```sh
+$ npm run demo
 ```
 
-Inline scripts and styles are processed via Gulp, thanks to [`gulp-process-inline`][process-inline].
+> The demo server is available on `localhost:3000`
 
-```html
-<script>
-    // Transpiled with Babel, even though it's in HTML
-    let myVar = 'my-var';
-    () => console.log(myVar);
-</script>
-```
+***
 
-### Module bundling 
+#### Todo
 
-Module bundling is handled with [Rollup][rollup], which allows you to import and export both ES6 and CommonJS modules.
+There are a few more options that should be added to this generator, if you'd like to contribute a PR adding any of these features I'll gladly merge it!
 
-```js
-// Require modules using ES6 syntax, Rollup will bundle them for you
-import foo from 'bar';
-foo(); 
-```
+- Add optional (and configurable) buildstep
+    - Rollup module bundling
+    - PostCSS + Autoprefixer 
+    - ES5 transpilation + minification 
+- Add SkateJS framework option
+- Add JS Module distribution (rather than HTML file) as an option
+- Bundle Yeoman and Browsersync into `web-component-cli`? In similar vein to `polymer-cli` but not tied to a framework
 
-If you opt out of compiling your element class to ES5, Babel will still run but only transpile for evergreen browsers (all of which support native ES6 classes) using `babel-preset-env`. Otherwise IE11 will be added as a Babel target.
-
-### Serving locally
-
-You can serve standalone elements locally with Browsersync. Run `gulp serve`, or the default `gulp` command, then go to `localhost:3000` to see your component page. You have a component demo in the `demo` folder, go to `localhost:3000/demo` to see it in action.
 
 ***
 
@@ -85,9 +84,5 @@ MIT © [Sean King](https://twitter.com/seaneking)
 
 [yeoman]: http://yeoman.io
 [polymer]: https://polymer-project.org
-[gulp]: https://gulpjs.com
-[postcss]: https://github.com/postcss/postcss
-[babel]: http://babeljs.io
-[rollup]: http://rollupjs.org
+[wct]: https://github.com/Polymer/web-component-tester
 [browsersync]: http://browsersync.io/
-[process-inline]: https://github.com/simplaio/gulp-process-inline

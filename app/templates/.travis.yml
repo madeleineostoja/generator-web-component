@@ -2,9 +2,6 @@ dist: trusty
 language: node_js
 node_js:
 - '8'
-before_script:
-- npm install -g web-component-tester
-script: xvfb-run wct
 addons:
   firefox: latest
   apt:

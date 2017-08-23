@@ -4,7 +4,9 @@
   "description": "<%= props.description %>",
   "main": "<%= props.name %>.html",
   "scripts": {
-    "test": "gulp test:local"
+    "test": "wct",
+    "posttest": "eslint .",
+    "demo": "browser-sync start -c bs-config.js"
   },
   "author": "<%= props.author %>",
   "license": "MIT",
@@ -20,38 +22,9 @@
   "bugs": {
     "url": "https://github.com/<%= props.github %>/<%= props.name %>/issues"
   },
-  "browserslist": [
-    "last 2 Chrome versions",
-    "last 2 Safari versions",
-    "last 2 ios versions",
-    "last 2 Edge versions",
-    "last 2 Firefox versions"
-  ],
   "devDependencies": {
-    "autoprefixer": "^7.1.1",
-    "babel-core": "^6.2.1",
-    "babel-eslint": "^7.1.1",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-env": "^1.4.0",
     "browser-sync": "^2.9.0",
     "eslint": "^3.14.1",
-    "gulp": "^3.9.0",
-    "gulp-eslint": "^3.0.0",
-    "gulp-htmlmin": "^3.0.0",
-    "gulp-if": "^2.0.0",
-    "gulp-inline-source": "^3.0.0",
-    "gulp-notify": "^3.0.0",
-    "gulp-plumber": "^1.0.0",
-    "gulp-postcss": "^7.0.0",
-    "gulp-process-inline": "^0.1.1",
-    "gulp-rollup-file": "^0.1.0",
-    "gulp-size": "^2.0.0",
-    "rollup-plugin-babel": "^2.6.0",
-    "rollup-plugin-commonjs": "^8.0.2",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "run-sequence": "^1.1.5",
-    "uglify-es": "^3.0.23",
-    "web-component-tester": "^6.0.0",
-    "yargs": "^8.0.1"
+    "web-component-tester": "^6.0.0"
   }
 }
