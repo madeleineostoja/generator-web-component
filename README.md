@@ -10,6 +10,7 @@ Quickly scaffold lightweight web components with [Yeoman][yeoman], with just wha
 - [Installation & usage](#installation--usage)
 - [Components for apps](#components-for-apps)
 - [Standalone components](#standalone-components)
+- [Todo](#todo)
 
 ## Features
 
@@ -62,7 +63,7 @@ $ npm run demo
 
 ***
 
-#### Todo
+## Todo
 
 There are a few more options that should be added to this generator, if you'd like to contribute a PR adding any of these features I'll gladly merge it!
 
