@@ -66,13 +66,13 @@ $ npm run demo
 
 There are a few more options that should be added to this generator, if you'd like to contribute a PR adding any of these features I'll gladly merge it!
 
-- Add optional (and configurable) buildstep
+- Add optional (and configurable) buildstep ([issue](https://github.com/seaneking/generator-web-component/issues/5))
     - Rollup module bundling
     - PostCSS + Autoprefixer 
     - ES5 transpilation + minification 
-- Add SkateJS framework option
-- Add JS Module distribution (rather than HTML file) as an option
-- Add basic unit tests for generator
+- Add SkateJS framework option ([issue](https://github.com/seaneking/generator-web-component/issues/4))
+- Add JS Module distribution (rather than HTML file) as an option ([issue](https://github.com/seaneking/generator-web-component/issues/6))
+- Add basic unit tests for generator ([issue](https://github.com/seaneking/generator-web-component/issues/7))
 - Bundle Yeoman and Browsersync into `web-component-cli`? In similar vein to `polymer-cli` but not tied to a framework
 
 
