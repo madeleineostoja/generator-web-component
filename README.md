@@ -72,6 +72,7 @@ There are a few more options that should be added to this generator, if you'd li
     - ES5 transpilation + minification 
 - Add SkateJS framework option
 - Add JS Module distribution (rather than HTML file) as an option
+- Add basic unit tests for generator
 - Bundle Yeoman and Browsersync into `web-component-cli`? In similar vein to `polymer-cli` but not tied to a framework
 
 
