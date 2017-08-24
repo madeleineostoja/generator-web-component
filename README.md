@@ -79,8 +79,8 @@ There are a few more options that should be added to this generator, if you'd li
 
 MIT © [Sean King](https://twitter.com/seaneking)
 
-[npm-badge]: https://img.shields.io/npm/v/generator-polymer-element.svg
-[npm-url]: https://npmjs.org/package/generator-polymer-element
+[npm-badge]: https://img.shields.io/npm/v/generator-web-component.svg
+[npm-url]: https://npmjs.org/package/generator-web-component
 
 [yeoman]: http://yeoman.io
 [polymer]: https://polymer-project.org
