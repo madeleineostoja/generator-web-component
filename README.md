@@ -63,7 +63,7 @@ $ npm run demo
 
 ***
 
-## Todo
+### Todo
 
 There are a few more options that should be added to this generator, if you'd like to contribute a PR adding any of these features I'll gladly merge it!
 
