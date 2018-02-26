@@ -37,7 +37,7 @@ $ yo web-component
 
 ## Components for apps
 
-To create a new web component for use inside a web app, select `'Part of an app'` when prompted. This will generate a single HTML file under the name of your element with the bare minimum of boilerplate.
+To create a new web component for use inside an existing project, select `'Part of an app'` when prompted. This will generate a single HTML file under the name of your element with the bare minimum of boilerplate.
 
 ## Standalone components
 
@@ -47,10 +47,10 @@ It's recommended to build your element as an ES6 class directly in the `[element
 
 The following NPM scripts will be configured for you:
 
-Script     | Description                                                                                                           
----------- | -----------                                                                                                           
-`test`     | Runs your WCT test suite in local browsers                                                                            
-`posttest` | Runs Eslint after tests (eg: for Travis)                                                                              
+Script     | Description
+---------- | -----------
+`test`     | Runs your WCT test suite in local browsers
+`posttest` | Runs Eslint after tests (eg: for Travis)
 `demo`     | Runs a demo server (with Browsersync) which reloads whenever you make changes in your component
 
 Run the scripts with NPM
@@ -61,7 +61,7 @@ $ npm run demo
 
 > The demo server is available on `localhost:3000`
 
-***
+---
 
 ### Todo
 
@@ -69,15 +69,11 @@ There are a few more options that should be added to this generator, if you'd li
 
 - Add optional (and configurable) buildstep ([issue](https://github.com/seaneking/generator-web-component/issues/5))
     - Rollup module bundling
-    - PostCSS + Autoprefixer 
-    - ES5 transpilation + minification 
+    - PostCSS + Autoprefixer
 - Add SkateJS framework option ([issue](https://github.com/seaneking/generator-web-component/issues/4))
-- Add JS Module distribution (rather than HTML file) as an option ([issue](https://github.com/seaneking/generator-web-component/issues/6))
-- Add basic unit tests for generator ([issue](https://github.com/seaneking/generator-web-component/issues/7))
 - Bundle Yeoman and Browsersync into `web-component-cli`? In similar vein to `polymer-cli` but not tied to a framework
 
-
-***
+---
 
 MIT © [Sean King](https://twitter.com/seaneking)
 
